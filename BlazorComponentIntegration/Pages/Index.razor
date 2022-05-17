@@ -1,0 +1,28 @@
+﻿@page "/"
+@inject IJSRuntime JS;
+
+<PageTitle>Index</PageTitle>
+
+@inject IJSRuntime JS;
+
+<div ng-app="myApp">
+
+    Testing AngularJS
+
+        <a href="#!firstPage">Call First Page</a>  
+        <br />  
+        <a href="#!secondPage">Call Second Page</a>  
+        <div ng-view></div>  
+
+</div>
+@code {
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("reinitAngular");
+        }
+    }
+}
+
