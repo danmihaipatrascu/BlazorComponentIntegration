@@ -16,4 +16,8 @@
     <Folder Include="wwwroot\app\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Componente\Componente.csproj" />
+  </ItemGroup>
+
 </Project>
