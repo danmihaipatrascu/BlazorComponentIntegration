@@ -56,4 +56,8 @@ app.controller("routeDemoSecondController", function ($scope) {
 app.controller("routeDemoThirdController", function ($scope) {
     console.log('routeDemoThirdController');
     $scope.XXX = "123456";
+
+    $scope.shout = function () {
+        console.log('clicked third');
+    }
 })  
